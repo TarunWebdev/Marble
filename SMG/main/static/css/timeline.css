@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap');
+html,
+body {
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+/**
+ * Timeline styling
+ */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  padding: 6vw 2vw 0 3vw;
+  position: relative;
+}
+.timeline-padding {
+	padding-top:4vw;
+}
+.timeline-section p {
+font-size:1.3vw;
+color:#FFF;
+line-height:1.4;
+margin-bottom:1.2vw;
+text-align:justify;
+}
+.timeline-section p span {
+font-size:1.5vw;
+font-weight:600;
+font-style:italic;
+}
+@media screen and (min-width: 768px) {
+  .timeline {
+    padding: 60px 20px 0;
+  }
+}
+.timeline__track {
+  background: rgba(255, 255, 255, 0.3);
+  background-clip: content-box;
+  height: 100%;
+  left: 40px;
+  min-height: 5px;
+  max-height: 100%;
+  padding: 0 4px 7px;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .timeline__track {
+    left: calc(50% - 7px);
+  }
+}
+.timeline__track::after {
+  background: #FFF;
+  border-radius: 50%;
+  bottom: 0;
+  content: '';
+  height: 10px;
+  left: 0;
+  position: absolute;
+  width: 10px;
+}
+.timeline__item {
+  padding-top: 20px;
+  padding-left: 30px;
+  position: relative;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .timeline__item {
+    padding-left: 0;
+	width:100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .timeline__item:nth-child(odd) {
+    margin-right: auto;
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .timeline__item:nth-child(even) {
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .timeline__item:nth-child(even) .timeline__line {
+    left: 0;
+    right: auto;
+  }
+}
+.timeline__line {
+  background:rgba(255, 255, 255, 0.3);
+  height:1px;
+  position: absolute;
+  left: 0;
+  top:8px;
+  width: 100%;
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .timeline__line {
+    left: auto;
+    right: 0;
+  }
+}
+.timeline__wrap img {
+  height: 100%;
+  width:100%;
+}
+@media screen and (max-width: 767.9px) {
+  .timeline__footer {
+    padding-left: 30px;
+  }
+}
+.timeline.is-init .timeline__line {
+  transition: width .5s ease-in-out;
+  width: 0;
+  will-change: width;
+}
+.timeline.is-init .timeline__wrap {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: transform .5s, opacity .2s;
+  will-change: opacity, transform;
+}
+.timeline.is-init .timeline__footer {
+  opacity: 0;
+  transition: opacity .2s;
+  will-change: opacity;
+}
+.timeline.is-loading .timeline__line, .timeline.is-loading .timeline__wrap, .timeline.is-loading .timeline__footer {
+  transition: none;
+}
+.timeline .is-visible .timeline__line {
+  width: 100%;
+}
+.timeline .is-visible .timeline__wrap {
+  opacity: 1;
+  transform: translateY(0);
+}
+.timeline-bg {
+	background-color:#F3AF25;
+	background-image:url(../images/stone-crafting-bg.jpg);
+	background-size:cover;
+	background-position:center top;
+	background-repeat:no-repeat;
+}
+.timeline-box {
+padding:2vw 3vw;
+}
+.timeline-img {
+background-color:#FFF;
+padding:1vw;
+}
+.timeline-circle {
+    width:4vw;
+    height: 4vw;
+    line-height: 4vw;
+    background-color: #FFF;
+    border-radius: 50%;
+	display:block;
+	margin-bottom:2vw;
+}
+.timeline-circle h3 {
+    font-size:2vw;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    padding-top:1vw;
+    text-transform: uppercase;
+}
+ .timeline__wrap h2 {
+color:#FFF!important;
+font-family: 'Roboto', sans-serif;
+font-size:1.8vw;
+font-weight:600;
+}
+.timeline__wrap p {
+font-size:1.3vw;
+color:#FFF!important;
+font-weight:400;
+text-align:left;
+}
+.timeline .is-visible.timeline__footer {
+  opacity: 1;
+}
+
+.intro {
+  background: #393e46;
+  padding: 5rem 0;
+}
+.intro p:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-section {
+  padding: 5vw 7vw;
+}
+@media only screen and (min-width : 320px) and (max-width : 767px) {
+.timeline-section {
+padding: 20px 10px;
+}
+.timeline-padding {
+padding-top:80px;
+}
+.timeline-section p {
+font-size:14px;
+margin-bottom:10px;
+text-align:left;
+font-weight:400;
+}
+.timeline-section p span {
+font-size:14px;
+}
+.timeline {
+padding:0;
+}
+.timeline__track {
+left:0;
+}
+.timeline-circle {
+width:30px;
+height: 30px;
+line-height: 30px;
+margin-bottom:10px;
+}
+.timeline-circle h3 {
+font-size:18px;
+padding-top:5px;
+}
+.timeline__wrap h2 {
+font-size:18px;
+}
+}
