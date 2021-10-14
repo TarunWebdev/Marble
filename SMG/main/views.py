@@ -17,7 +17,6 @@ def capacity(request):
     return render(request,'production-capacity.html')
 
 
-
 #Need model
 def stonecollection(request):
     return render(request , 'products.html')
