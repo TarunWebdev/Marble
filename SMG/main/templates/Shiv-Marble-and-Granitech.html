@@ -73,35 +73,34 @@ Onyx, Quartzite, Shiv Marble and Granitech">
 <nav id='cssmenu'>
 <div class="button"></div>
 <ul>
-<li><a href=' {% static 'index.html' %} '>HOME</a></li>
-<li><a href=' {% static 'about-Shiv-Marble-and-Granite.html' %} '>About SMG</a>
-<ul>
-<li><a href=' {% static 'the-company.html' %} '>The Company</a></li>
-<li><a href=' {% static 'management-Shiv-Marble-and-Granite.html' %} '>Management</a></li>
-<li><a href=" {% static 'products.html' %} ">Products</a></li>
-<li><a href=' {% static 'production-capacity.html' %} '>Production Capacity</a></li>
-</ul>
-</li>
-
-<li><a href=' {% static 'products.html' %} '>STONE COLLECTION </a>
-<ul>
-<li><a href=' {% static 'imported-marble.html' %} '>Imported Marble</a></li>
-<li><a href=' {% static 'indian-marble.html' %} '>Indian Marble</a></li>
-<li><a href=" {% static 'imported-granite.html' %} ">Imported Granite</a></li>
-<li><a href=' {% static 'indian-granite.html' %} '>Indian Granite</a></li>
-<li><a href=' {% static 'kalinga-composite.html' %} '>Kalinga Composite</a></li>
-<li><a href=' {% static 'kalinga-quartz.html' %} '>Kalinga Quartz</a></li>
-<li><a href=' {% static 'onyx.html' %} '>Onyx</a></li>
-<li><a href=" {% static 'quartzite.html' %} ">Quartzite</a></li>
-<li><a href=" {% static 'art-craft.html' %} ">Art & Craft</a></li>
-
-<li><a href=' {% static 'Shiv-Marble-and-Granite.html' %} '>SMG</a></li>  
-</ul>
-</li>
-<li><a href=' {% static 'stone-crafting-process.html' %} '>Stone Crafting Process</a></li>
-<li><a href=' {% static 'why-Shiv-Marble-and-Granite.html' %} '>WHY SMG?</a></li>
-<li><a href=' {% static 'blogs.html' %} '>BLOGS</a></li>
-<li><a href=' {% static 'contact.html' %} '>CONTACT US</a></li>
+	<li><a href="{% url 'main:index' %}">HOME</a></li>
+	<li><a href="{% url 'main:thecompany' %}">About SMG</a>
+	<ul>
+		<li><a href="{% url 'main:thecompany' %}">The Company</a></li>
+		<li><a href="{% url 'main:management' %}">Management</a></li>
+		<li><a href="{% url 'main:stonecollection' %}">Products</a></li>
+		<li><a href="{% url 'main:capacity' %}">Production Capacity</a></li>
+	</ul>
+	</li>
+	<li><a href="{% url 'main:stonecollection' %}">STONE COLLECTION </a>
+	<ul>
+		<!-- From backend -->
+		<li><a href="imported-marble.html">Imported Marble</a></li>
+		<li><a href="indian-marble.html">Indian Marble</a></li>
+		<li><a href="imported-granite.html">Imported Granite</a></li>
+		<li><a href="indian-granite.html">Indian Granite</a></li>
+		<li><a href="kalinga-composite.html">Kalinga Composite</a></li>
+		<li><a href="kalinga-quartz.html">Kalinga Quartz</a></li>
+		<li><a href="onyx.html">Onyx</a></li>
+		<li><a href="quartzite.html">Quartzite</a></li>
+		<li><a href="art-craft.html">Art &amp; Craft</a></li>
+		<li><a href="{% url 'main:thecompany' %}">SMG</a></li>
+	</ul>
+	</li>
+	<li><a href="{% url 'main:stonecraft' %}">Stone Crafting Process</a></li>
+	<li><a href="{% url 'main:whysmg' %}">WHY SMG?</a></li>
+	<li><a href="{% url 'main:blogs' %}">BLOGS</a></li>
+	<li><a href="{% url 'main:contact' %}">CONTACT US</a></li>
 </ul>
 </nav>
 </div>
@@ -263,11 +262,11 @@ and Granite</strong></h4>
 <div class="col-md-3 col-lg-3 col-ds-6 col-rs-6 text-left ftr-padding-left">
 <h3>USEFUL LINKS</h3>
 <div class="ftr-padding-top">
-<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'about-Shiv-Marble-and-Granite.html' %} ">About SMG</a></li>
-<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'stone-crafting-process.html' %} ">Stone Crafting Process</a></li>
-<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'why-Shiv-Marble-and-Granite.html' %} ">WHY SMG?</a></li>
-<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'blogs.html' %} ">Blogs</a></li>
-<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'contact.html' %} ">Contact Us</a></li>
+	<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% url 'main:thecompany' %} ">About SMG</a></li>
+	<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% url 'main:stonecraft' %} ">Stone Crafting Process</a></li>
+	<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% url 'main:whysmg' %}">WHY SMG?</a></li>
+	<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% url 'main:blogs' %} ">Blogs</a></li>
+	<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% url 'main:contact' %} ">Contact Us</a></li>
 <a class="facebook" href="https://www.facebook.com/shivmarbleAndGranit/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 <a class="instagram" href="https://www.instagram.com/shiv_marble_granite/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 <a class="whatsapp" href="https://wa.me/9654435062" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>

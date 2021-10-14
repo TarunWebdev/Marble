@@ -13,9 +13,11 @@ urlpatterns = [
     path('capacity', views.capacity , name = 'capacity'),
 
     path('stonecollection', views.stonecollection , name = 'stonecollection'),
-    # path('blogs', views.blogs , name = 'blogs'),
+    path('blogs', views.blogs , name = 'blogs'),
 
     path('contact', views.contact , name = 'contact'),
     path('stonecraft', views.stonecraft , name = 'stonecraft'),
     path('whysmg', views.whysmg , name = 'whysmg'),
 ]
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -22,8 +22,8 @@ def stonecollection(request):
     return render(request , 'products.html')
 
 # NEW FRONTEND
-# def blogs(request):
-#     return render(request , 'blogs.html')
+def blogs(request):
+    return render(request , 'blogs.html')
 
 
 #STATIC

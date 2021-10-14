@@ -30,17 +30,18 @@ Onyx, Quartzite, Shiv Marble and Granitech"><meta name="syndication-source" cont
 <div class="button"></div>
 
 <ul>
-	<li><a href="index.html">HOME</a></li>
-	<li><a href="about-Shiv-Marble-and-Granite.html">About SMG</a>
+	<li><a href="{% url 'main:index' %}">HOME</a></li>
+	<li><a href="{% url 'main:thecompany' %}">About SMG</a>
 	<ul>
-		<li><a href="the-company.html">The Company</a></li>
-		<li><a href="management-Shiv-Marble-and-Granite.html">Management</a></li>
-		<li><a href="products.html">Products</a></li>
-		<li><a href="production-capacity.html">Production Capacity</a></li>
+		<li><a href="{% url 'main:thecompany' %}">The Company</a></li>
+		<li><a href="{% url 'main:management' %}">Management</a></li>
+		<li><a href="{% url 'main:stonecollection' %}">Products</a></li>
+		<li><a href="{% url 'main:capacity' %}">Production Capacity</a></li>
 	</ul>
 	</li>
-	<li><a href="products.html">STONE COLLECTION </a>
+	<li><a href="{% url 'main:stonecollection' %}">STONE COLLECTION </a>
 	<ul>
+		<!-- From backend -->
 		<li><a href="imported-marble.html">Imported Marble</a></li>
 		<li><a href="indian-marble.html">Indian Marble</a></li>
 		<li><a href="imported-granite.html">Imported Granite</a></li>
@@ -50,13 +51,13 @@ Onyx, Quartzite, Shiv Marble and Granitech"><meta name="syndication-source" cont
 		<li><a href="onyx.html">Onyx</a></li>
 		<li><a href="quartzite.html">Quartzite</a></li>
 		<li><a href="art-craft.html">Art &amp; Craft</a></li>
-		<li><a href="Shiv-Marble-and-Granite.html">SMG</a></li>
+		<li><a href="{% url 'main:thecompany' %}">SMG</a></li>
 	</ul>
 	</li>
-	<li><a href="stone-crafting-process.html">Stone Crafting Process</a></li>
-	<li><a href="why-Shiv-Marble-and-Granite.html">WHY SMG?</a></li>
-	<li><a href="blogs.html">BLOGS</a></li>
-	<li><a href="contact.html">CONTACT US</a></li>
+	<li><a href="{% url 'main:stonecraft' %}">Stone Crafting Process</a></li>
+	<li><a href="{% url 'main:whysmg' %}">WHY SMG?</a></li>
+	<li><a href="{% url 'main:blogs' %}">BLOGS</a></li>
+	<li><a href="{% url 'main:contact' %}">CONTACT US</a></li>
 </ul>
 </nav>
 </div>
@@ -924,7 +925,7 @@ Application</h2>
 
 <div class="col-md-3 col-lg-3 col-ds-6 col-rs-6 text-left ftr-border-right ftr-padding-left">
 <h3>STONE COLLECTIOIN</h3>
-
+<!-- BACKEND -->
 <div class="ftr-padding-top">
 <ul>
 	<li><a href="imported-marble.html">Imported Marble</a></li>
@@ -945,11 +946,11 @@ Application</h2>
 
 <div class="ftr-padding-top">
 <ul>
-	<li><a href="about-Shiv-Marble-and-Granite.html">About SMG</a></li>
-	<li><a href="stone-crafting-process.html">Stone Crafting Process</a></li>
-	<li><a href="why-Shiv-Marble-and-Granite.html">WHY SMG?</a></li>
-	<li><a href="blogs.html">Blogs</a></li>
-	<li><a href="contact.html">Contact Us</a></li>
+	<li><a href="{% url 'main:thecompany' %}">About SMG</a></li>
+	<li><a href="{% url 'main:stonecraft' %}">Stone Crafting Process</a></li>
+	<li><a href="{% url 'main:whysmg' %}">WHY SMG?</a></li>
+	<li><a href="{% url 'main:blogs' %}">Blogs</a></li>
+	<li><a href="{% url 'main:contact' %}">Contact Us</a></li>
 </ul>
 </div>
 </div>
