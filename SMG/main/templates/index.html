@@ -311,77 +311,26 @@ to { transform: rotate(360deg); }
 </div>
 
 <div class="row">
+{% for stone in stones %}
 <div class="col-lg-3 col-vs-6 col-md-3 col-ds-6 col-rs-4 no-padding">
-<div class="team-member"><a href="indian-marble.html"><img alt="" src="{% static 'images/ind-marble.jpg' %}" /> </a>
+	<div class="team-member">
+		<a href="indian-marble.html">
+			<!-- <img alt="" src="{% static 'images/ind-marble.jpg' %}" />  -->
+			<img alt="" src="{{ stone.image.url }}" /> 
+		</a>
 
-<div class="member-info">
-<h2><a href="indian-marble.html">Indian Marble</a></h2>
+		<div class="member-info">
+			<h2>
+				<a href="indian-marble.html">{{ stone.name }}</a>
+			</h2>
+		</div>
+		<a href="indian-marble.html"> </a>
+	</div>
 </div>
-<a href="indian-marble.html"> </a></div>
-</div>
+{% endfor %}
 
-<div class="col-lg-3 col-vs-6 col-md-3 col-ds-6 col-rs-4 no-padding">
-<div class="team-member"><a href="indian-granite.html"><img alt="" src="{% static 'images/ind-granite.jpg' %}" /> </a>
 
-<div class="member-info">
-<h2><a href="indian-granite.html">Indian Granite</a></h2>
-</div>
-<a href="indian-granite.html"> </a></div>
-</div>
 
-<div class="col-lg-3 col-vs-6 col-md-3 col-ds-6 col-rs-4 no-padding">
-<div class="team-member"><a href="imported-marble.html"><img alt="" src="{% static 'images/imp-marble.jpg' %}" /> </a>
-
-<div class="member-info">
-<h2><a href="imported-marble.html">Imported Marble</a></h2>
-</div>
-<a href="imported-marble.html"> </a></div>
-</div>
-
-<div class="col-lg-3 col-vs-6 col-md-3 col-ds-6 col-rs-4 no-padding">
-<div class="team-member"><a href="imported-granite.html"><img alt="" src="{% static 'images/imp-granite.jpg' %}" /> </a>
-
-<div class="member-info">
-<h2><a href="imported-granite.html">Imported Granite</a></h2>
-</div>
-<a href="imported-granite.html"> </a></div>
-</div>
-
-<div class="col-lg-3 col-vs-6 col-md-3 col-ds-6 col-rs-4 no-padding">
-<div class="team-member"><a href="kalinga-composite.html"><img alt="" src="{% static 'images/kalinga-composite-thumb.jpg' %}" /> </a>
-
-<div class="member-info">
-<h2><a href="kalinga-composite.html">Kalinga Composite</a></h2>
-</div>
-<a href="kalinga-composite.html"> </a></div>
-</div>
-
-<div class="col-lg-3 col-vs-6 col-md-3 col-ds-6 col-rs-4 no-padding">
-<div class="team-member"><a href="onyx.html"><img alt="" src="{% static 'images/imp-onyx.jpg' %}" /> </a>
-
-<div class="member-info">
-<h2><a href="onyx.html">Onyx</a></h2>
-</div>
-<a href="onyx.html"> </a></div>
-</div>
-
-<div class="col-lg-3 col-vs-6 col-md-3 col-ds-6 col-rs-4 no-padding">
-<div class="team-member"><a href="Shiv-Marble-and-Granite.html"><img alt="" src="{% static 'images/imp.jpg' %}" /> </a>
-
-<div class="member-info">
-<h2><a href="Shiv-Marble-and-Granite.html">Art &amp; Craft</a></h2>
-</div>
-<a href="Shiv-Marble-and-Granite.html"> </a></div>
-</div>
-
-<div class="col-lg-3 col-vs-6 col-md-3 col-ds-6 col-rs-4 no-padding">
-<div class="team-member"><a href="Shiv-Marble-and-Granite.html"><img alt="" src="{% static 'images/imp.jpg' %}" /> </a>
-
-<div class="member-info">
-<h2><a href="Shiv-Marble-and-Granite.html">SMG</a></h2>
-</div>
-<a href="Shiv-Marble-and-Granite.html"> </a></div>
-</div>
 </div>
 </div>
 </section>

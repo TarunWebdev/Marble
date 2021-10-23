@@ -1,9 +1,11 @@
 from django.shortcuts import render
+from main.models import Blog , StoneType , Stone , CarouselCategory , CarouselImages
 
 # Create your views here.
-#Need model
+#Need modelS
 def index(request):
-    return render(request,'index.html')
+    stones = StoneType.objects.all()
+    return render(request,'index.html',{'stones': stones})
 
 
 #ABOUT SMG
