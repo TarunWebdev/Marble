@@ -19,13 +19,30 @@ def capacity(request):
     return render(request,'production-capacity.html')
 
 
-#Need model
 def stonecollection(request):
-    return render(request , 'products.html')
+    stonesType = StoneType.objects.all()
+    return render(request , 'products.html' , {'stonesType': stonesType})
+    # sends all stone type
+
+def stone(request):
+    s_name = str(request.GET["StoneType"])
+    stones = Stone.objects.select_related('StoneType').filter(category__name=s_name)
+    stoneType = StoneType.objects.filter(chapter_name=s_name)
+    return render(request, "singleStone.html", {'stones': stones, 'stoneType': stoneType})
+    # sends stones of a particular category
 
 # NEW FRONTEND
 def blogs(request):
-    return render(request , 'blogs.html')
+    blogs = Blog.objects.all()
+    return render(request , 'blogs.html' , {'blogs': blogs})
+    # sends all blogs for 'coming soon page'
+
+
+def pageBlog(request):
+    bObjget = str(request.GET["title"])
+    blogs = Blog.objects.filter(title=bObjget)
+    return render(request, "blogs.html", {'bObj': blogs})
+# New blog Page from Github which will be for single Blog view
 
 
 #STATIC
