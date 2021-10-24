@@ -5,6 +5,8 @@ from main.models import Blog , StoneType , Stone , CarouselCategory , CarouselIm
 #Need modelS
 def index(request):
     stones = StoneType.objects.all()
+    carousel = CarouselCategory.objects.all()
+    carouselCatFilter = 
     return render(request,'index.html',{'stones': stones})
 
 

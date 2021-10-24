@@ -21,7 +21,7 @@ and Granite, Mr Kailash Singhvi and Mr Mahaveer Singhvi, carry a strong convicti
 <meta name="topic" content="A highly qualified technical section devoted to design study, development, and carrying-out of projects.">
 <meta name="summary" content="Shiv Marble 
 and Granite is an eminent Indian stone enterprise and a leading global brand. Having an experience of more than 30 years, the company today stands at the forefront of the natural and artificial stone industry.">
-<meta name"classification" content="Shiv Marble and Granite has set up itself as an esteemed technologically - progressive stone company which is continually emerging to redefine and magnify the most mesmerizing creation, Mother Earth has honoured us with.">
+<meta name="classification" content="Shiv Marble and Granite has set up itself as an esteemed technologically - progressive stone company which is continually emerging to redefine and magnify the most mesmerizing creation, Mother Earth has honoured us with.">
 <meta name="author" content="info@Shiv Marble and Granite.in">
 <meta name="designer" content="Website Designed & Developed By: Webtech Softwares Pvt. Ltd.">
 <meta name="reply-to" content="info@Shiv Marble and Granite.in">
@@ -128,98 +128,20 @@ and Granite is the first choice of homeowners, builders and architects. The comp
                 <p>The company is known all around for its high-end products, accessible at a competitive price range. At Shiv Marble and Granite, the flooring & cladding material is available in the range of INR 40 to INR 5000 / Sq.Ft. Shiv Marble and Granite is a harbour of exclusive, commercial stones and tiles that once installed, will embellish your home, wall, floor in an aesthetically beautiful way.</p>
 			</div>
 			<div class="row">
+				{% for stone in stonesType %}
 				<div class="col-lg-4 col-vs-6 col-md-4 col-ds-6 col-rs-4 no-padding">
 					<div class="team-member">
                     <a href=" {% static 'imported-marble.html' %} ">
-						<img src=" {% static 'images/imp-marble.jpg' %} " alt="">
+						<img src=" {{ stone.image.url }} " alt="">
 						<div class="member-info">
-							<h2>Imported Marble</h2>
+							<h2>{{ stone.name }}</h2>
 						</div>
-                        </a>					</div>
-			  </div>
+                        </a>					
+					</div>
+			    </div>
+				{% endfor %}
 				
-				<div class="col-lg-4 col-vs-6 col-md-4 col-ds-6 col-rs-4 no-padding">
-					<div class="team-member">
-                    <a href=" {% static 'indian-marble.html' %} ">
-						<img src=" {% static 'images/ind-marble.jpg' %} " alt="">
-						<div class="member-info">
-							<h2>Indian Marble</h2>
-						</div>
-                        </a>					</div>
-			  </div>
-				
-				<div class="col-lg-4 col-vs-6 col-md-4 col-ds-6 col-rs-4 no-padding">
-					<div class="team-member">
-                    <a href=" {% static 'imported-granite.html' %} ">
-						<img src=" {% static 'images/imp-granite.jpg' %} " alt="">
-						<div class="member-info">
-							<h2>Imported Granite</h2>
-						</div>
-                        </a>					</div>
-			  </div>
-                
-                <div class="col-lg-4 col-vs-6 col-md-4 col-ds-6 col-rs-4 no-padding">
-					<div class="team-member">
-                    <a href=" {% static 'indian-granite.html' %} ">
-						<img src=" {% static 'images/ind-granite.jpg' %} " alt="">
-						<div class="member-info">
-							<h2>Indian Granite</h2>
-						</div>
-                        </a>					</div>
-			  </div>
-                
-                
-                <div class="col-lg-4 col-vs-6 col-md-4 col-ds-6 col-rs-4 no-padding">
-					<div class="team-member">
-                    <a href=" {% static 'kalinga-composite.html' %} ">
-						<img src=" {% static 'images/kalinga-composite-thumb.jpg' %} " alt="">
-						<div class="member-info">
-							<h2>Kalinga Composite</h2>
-						</div>
-                        </a>					</div>
-			  </div>
-                
-                <div class="col-lg-4 col-vs-6 col-md-4 col-ds-6 col-rs-4 no-padding">
-					<div class="team-member">
-                    <a href=" {% static 'kalinga-quartz.html' %} ">
-						<img src=" {% static 'images/kalinga.jpg' %} " alt="">
-						<div class="member-info">
-							<h2>Kalinga Quartz</h2>
-						</div>
-                        </a>					</div>
-			  </div>
-                
-                
-                <div class="col-lg-4 col-vs-6 col-md-4 col-ds-6 col-rs-4 no-padding">
-					<div class="team-member">
-                    <a href=" {% static 'onyx.html' %} ">
-						<img src=" {% static 'images/imp-onyx.jpg' %} " alt="">
-						<div class="member-info">
-							<h2>Onyx</h2>
-						</div>
-                        </a>					</div>
-			  </div>
-                
-                <div class="col-lg-4 col-vs-6 col-md-4 col-ds-6 col-rs-4 no-padding">
-					<div class="team-member">
-                    <a href=" {% static 'quartzite.html' %} ">
-						<img src=" {% static 'images/imp-quartzite.jpg' %} " alt="">
-						<div class="member-info">
-							<h2>Quartzite</h2>
-						</div>
-                        </a>					</div>
-			  </div>
-                
-                <div class="col-lg-4 col-vs-6 col-md-4 col-ds-6 col-rs-4 no-padding">
-					<div class="team-member">
-                    <a href=" {% static 'Shiv Marble and Granitech.html' %} ">
-						<img src=" {% static 'images/imp-Shiv Marble and Granitech.jpg' %} " alt="">
-						<div class="member-info">
-							<h2SMG/h2>
-						</div>
-                        </a>					</div>
-			  </div>
-                
+			
                 
                 
                 
