@@ -423,8 +423,11 @@ Sq. ft. Sold</p>
 	{% csrf_token %}
 
 {% for cat , fil in mylist %}
-	
-	<li class="btn-filter" data-filter="{{ fil }}"> {{ cat.name|wordwrap:3 }} </li>
+	{% if fil == 'all' %}
+	<li class="btn-filter" data-filter="*"> {{ cat.name|wordwrap:3 }} </li>
+	{% else %}
+	<li class="btn-filter" data-filter=".{{ fil }}"> {{ cat.name|wordwrap:3 }} </li>
+	{% endif %}
 {% endfor %}
 </ul>
 
