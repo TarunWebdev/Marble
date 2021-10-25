@@ -6,8 +6,18 @@ from main.models import Blog , StoneType , Stone , CarouselCategory , CarouselIm
 def index(request):
     stones = StoneType.objects.all()
     carousel = CarouselCategory.objects.all()
-    carouselCatFilter = 
-    return render(request,'index.html',{'stones': stones})
+    carouselFilter = []
+    for i in carousel :
+        temp = i.name.replace(" ", "_").lower()
+        carouselFilter.append(temp)
+    mylist = zip(carousel, carouselFilter)
+    carouselImages = CarouselImages.objects.all()
+    carouselImagesFilter = []
+    for i in carouselImages :
+        temp = i.category.name.replace(" ", "_").lower()
+        carouselImagesFilter.append(temp)
+    mylist2 = zip(carouselImages, carouselImagesFilter)
+    return render(request,'index.html',{'stones': stones ,'mylist':mylist , 'mylist2':mylist2})
 
 
 #ABOUT SMG

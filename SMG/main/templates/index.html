@@ -411,21 +411,31 @@ Sq. ft. Sold</p>
 <div class="section-title">
 <h1>Shiv Marble and Granite Application</h1>
 
-<ul class="projects-filter-nav">
+<!-- <ul class="projects-filter-nav">
 	<li class="btn-filter" data-filter="*">ALL</li>
 	<li class="btn-filter" data-filter=".rest">COMMERCIAL</li>
 	<li class="btn-filter" data-filter=".build">LIVING ROOM</li>
 	<li class="btn-filter" data-filter=".apart">KITCHEN</li>
 	<li class="btn-filter" data-filter=".bath">BATHROOM</li>
 	<li class="btn-filter" data-filter=".bedroom">BEDROOM</li>
+</ul> -->
+<ul class="projects-filter-nav">
+	{% csrf_token %}
+
+{% for cat , fil in mylist %}
+	
+	<li class="btn-filter" data-filter="{{ fil }}"> {{ cat.name|wordwrap:3 }} </li>
+{% endfor %}
 </ul>
+
 </div>
 </div>
 </div>
 </div>
 
 <div class="projects-slider slider-height" id="projects-carousel">
-<div class="single-project-box">
+
+<!-- <div class="single-project-box">
 <div class="single-project rest"><img src="{% static 'images/projects/commercial-projects-1.jpg' %}" />
 <div class="project-content">
 <h2>Commercial<br />
@@ -450,385 +460,20 @@ Room</h2>
 Application</h2>
 </div>
 </div>
-</div>
+</div> -->
 
+{% for item , filter in mylist2 %}
 <div class="single-project-box">
-<div class="single-project apart"><img src="{% static 'images/projects/kitchen-1.jpg' %}" />
-<div class="project-content">
-<h2>Kitchen<br />
-Application</h2>
+	<div class="single-project {{ filter }}">
+		<img src="{{ item.image.url }}" />
+		<div class="project-content">
+			<!-- <h2>Bathroom<br />Application</h2> -->
+			<h2>{{item.category.name}}</h2>
+		</div>
+	</div>
 </div>
-</div>
-</div>
+{% endfor %}
 
-<div class="single-project-box">
-<div class="single-project bedroom"><img src="{% static 'images/projects/bedroom-1.jpg' %}" />
-<div class="project-content">
-<h2>Bedroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project  build"><img src="{% static 'images/projects/living-room-2.jpg' %}" />
-<div class="project-content">
-<h2>Living<br />
-Room</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project apart"><img src="{% static 'images/projects/kitchen-2.jpg' %}" />
-<div class="project-content">
-<h2>Kitchen<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project rest"><img src="{% static 'images/projects/commercial-projects-2.jpg' %}" />
-<div class="project-content">
-<h2>Commercial<br />
-Projects</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-2.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project build"><img src="{% static 'images/projects/living-room-3.jpg' %}" />
-<div class="project-content">
-<h2>Living<br />
-Room</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project apart"><img src="{% static 'images/projects/kitchen-3.jpg' %}" />
-<div class="project-content">
-<h2>Kitchen<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project rest"><img src="{% static 'images/projects/commercial-projects-3.jpg' %}" />
-<div class="project-content">
-<h2>Commercial<br />
-Projects</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-3.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project build"><img src="{% static 'images/projects/living-room-4.jpg' %}" />
-<div class="project-content">
-<h2>Living<br />
-Room</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project apart"><img src="{% static 'images/projects/kitchen-4.jpg' %}" />
-<div class="project-content">
-<h2>Kitchen<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project rest"><img src="{% static 'images/projects/commercial-projects-4.jpg' %}" />
-<div class="project-content">
-<h2>Commercial<br />
-Projects</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-4.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-5.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project rest"><img src="{% static 'images/projects/commercial-projects-5.jpg' %}" />
-<div class="project-content">
-<h2>Commercial<br />
-Projects</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project build"><img src="{% static 'images/projects/living-room-5.jpg' %}" />
-<div class="project-content">
-<h2>Living<br />
-Room</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project apart"><img src="{% static 'images/projects/kitchen-5.jpg' %}" />
-<div class="project-content">
-<h2>Kitchen<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-6.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project build"><img src="{% static 'images/projects/living-room-6.jpg' %}" />
-<div class="project-content">
-<h2>Living<br />
-Room</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-7.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-8.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project build"><img src="{% static 'images/projects/living-room-7.jpg' %}" />
-<div class="project-content">
-<h2>Living<br />
-Room</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-9.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project build"><img src="{% static 'images/projects/living-room-8.jpg' %}" />
-<div class="project-content">
-<h2>Living<br />
-Room</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-10.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-11.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-12.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-13.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-14.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-15.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-16.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-17.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-18.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-19.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-20.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-21.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-22.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-23.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-24.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-25.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
-
-<div class="single-project-box">
-<div class="single-project bath"><img src="{% static 'images/projects/bathroom-26.jpg' %}" />
-<div class="project-content">
-<h2>Bathroom<br />
-Application</h2>
-</div>
-</div>
-</div>
 </div>
 </div>
 
