@@ -15,6 +15,7 @@ urlpatterns = [
 
     path('stonecollection', views.stonecollection , name = 'stonecollection'),
     path('blogs', views.blogs , name = 'blogs'),
+    path('pageBlog', views.pageBlog , name = 'pageBlog'),
 
     path('contact', views.contact , name = 'contact'),
     path('stonecraft', views.stonecraft , name = 'stonecraft'),

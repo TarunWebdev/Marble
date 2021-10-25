@@ -53,7 +53,7 @@ def blogs(request):
 def pageBlog(request):
     bObjget = str(request.GET["title"])
     blogs = Blog.objects.filter(title=bObjget)
-    return render(request, "blogs.html", {'bObj': blogs})
+    return render(request, "blog.html", {'bObj': blogs})
 # New blog Page from Github which will be for single Blog view
 
 
