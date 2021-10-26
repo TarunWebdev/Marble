@@ -14,6 +14,7 @@ urlpatterns = [
     path('capacity', views.capacity , name = 'capacity'),
 
     path('stonecollection', views.stonecollection , name = 'stonecollection'),
+    path('stone', views.stone , name = 'stone'),
     path('blogs', views.blogs , name = 'blogs'),
     path('pageBlog', views.pageBlog , name = 'pageBlog'),
 

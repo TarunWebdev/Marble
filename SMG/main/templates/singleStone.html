@@ -21,7 +21,7 @@ and Granite, Mr Kailash Singhvi and Mr Mahaveer Singhvi, carry a strong convicti
 <meta name="topic" content="A highly qualified technical section devoted to design study, development, and carrying-out of projects.">
 <meta name="summary" content="Shiv Marble 
 and Granite is an eminent Indian stone enterprise and a leading global brand. Having an experience of more than 30 years, the company today stands at the forefront of the natural and artificial stone industry.">
-<meta name="classification" content="Shiv Marble and Granite has set up itself as an esteemed technologically - progressive stone company which is continually emerging to redefine and magnify the most mesmerizing creation, Mother Earth has honoured us with.">
+<meta name"classification" content="Shiv Marble and Granite has set up itself as an esteemed technologically - progressive stone company which is continually emerging to redefine and magnify the most mesmerizing creation, Mother Earth has honoured us with.">
 <meta name="author" content="info@Shiv Marble and Granite.in">
 <meta name="designer" content="Website Designed & Developed By: Webtech Softwares Pvt. Ltd.">
 <meta name="reply-to" content="info@Shiv Marble and Granite.in">
@@ -60,7 +60,7 @@ Onyx, Quartzite, Shiv Marble and Granitech">
 
 </head>
 <body>
-    
+        
 <!-- Header section start -->   
 <header class="transition tr-header">
 <div class="row">
@@ -73,47 +73,48 @@ Onyx, Quartzite, Shiv Marble and Granitech">
 <nav id='cssmenu'>
 <div class="button"></div>
 <ul>
-	<li><a href="{% url 'main:index' %}">HOME</a></li>
-	<li><a href="{% url 'main:thecompany' %}">About SMG</a>
-	<ul>
-		<li><a href="{% url 'main:thecompany' %}">The Company</a></li>
-		<li><a href="{% url 'main:management' %}">Management</a></li>
-		<li><a href="{% url 'main:stonecollection' %}">Products</a></li>
-		<li><a href="{% url 'main:capacity' %}">Production Capacity</a></li>
-	</ul>
-	</li>
-	<li><a href="{% url 'main:stonecollection' %}">STONE COLLECTION </a>
-	<ul>
-		<!-- From backend -->
-		<li><a href="imported-marble.html">Imported Marble</a></li>
-		<li><a href="indian-marble.html">Indian Marble</a></li>
-		<li><a href="imported-granite.html">Imported Granite</a></li>
-		<li><a href="indian-granite.html">Indian Granite</a></li>
-		<li><a href="kalinga-composite.html">Kalinga Composite</a></li>
-		<li><a href="kalinga-quartz.html">Kalinga Quartz</a></li>
-		<li><a href="onyx.html">Onyx</a></li>
-		<li><a href="quartzite.html">Quartzite</a></li>
-		<li><a href="art-craft.html">Art &amp; Craft</a></li>
-		<li><a href="{% url 'main:thecompany' %}">SMG</a></li>
-	</ul>
-	</li>
-	<li><a href="{% url 'main:stonecraft' %}">Stone Crafting Process</a></li>
-	<li><a href="{% url 'main:whysmg' %}">WHY SMG?</a></li>
-	<li><a href="{% url 'main:blogs' %}">BLOGS</a></li>
-	<li><a href="{% url 'main:contact' %}">CONTACT US</a></li>
+<li><a href=' {% static 'index.html' %} '>HOME</a></li>
+<li><a href=' {% static 'about-Shiv-Marble-and-Granite.html' %} '>About SMG</a>
+<ul>
+<li><a href=' {% static 'the-company.html' %} '>The Company</a></li>
+<li><a href=' {% static 'management-Shiv-Marble-and-Granite.html' %} '>Management</a></li>
+<li><a href=" {% static 'products.html' %} ">Products</a></li>
+<li><a href=' {% static 'production-capacity.html' %} '>Production Capacity</a></li>
+</ul>
+</li>
+
+<li><a href=' {% static 'products.html' %} '>STONE COLLECTION </a>
+<ul>
+<li><a href=' {% static 'imported-marble.html' %} '>Imported Marble</a></li>
+<li><a href=' {% static 'indian-marble.html' %} '>Indian Marble</a></li>
+<li><a href=" {% static 'imported-granite.html' %} ">Imported Granite</a></li>
+<li><a href=' {% static 'indian-granite.html' %} '>Indian Granite</a></li>
+<li><a href=' {% static 'kalinga-composite.html' %} '>Kalinga Composite</a></li>
+<li><a href=' {% static 'kalinga-quartz.html' %} '>Kalinga Quartz</a></li>
+<li><a href=' {% static 'onyx.html' %} '>Onyx</a></li>
+<li><a href=" {% static 'quartzite.html' %} ">Quartzite</a></li>
+<li><a href=" {% static 'art-craft.html' %} ">Art & Craft</a></li>
+
+<li><a href=' {% static 'Shiv-Marble-and-Granite.html' %} '>SMG</a></li>  
+</ul>
+</li>
+<li><a href=' {% static 'stone-crafting-process.html' %} '>Stone Crafting Process</a></li>
+<li><a href=' {% static 'why-Shiv-Marble-and-Granite.html' %} '>WHY SMG?</a></li>
+<li><a href=' {% static 'blogs.html' %} '>BLOGS</a></li>
+<li><a href=' {% static 'contact.html' %} '>CONTACT US</a></li>
 </ul>
 </nav>
 </div>
 </div>
 </header>
 <!-- Header section end --> 
-
 <!-- InstanceBeginEditable name="head" -->
-
+<link href=" {% static 'css/lightgallery.css' %} " rel="stylesheet">
+<link href=" {% static 'css/gallery.css' %} " rel="stylesheet">
 <!-- Page header section start -->
-	<section class="page-header-section set-bg" data-setbg="images/products-header.jpg">
+	<section class="page-header-section set-bg" data-setbg="images/marble-header.jpg">
 		<div class="container-fluid">
-			<h1 class="header-title">STONE COLLECTION</h1>
+			<h1 class="header-title">Imported Marble</h1>
 		</div>
 	</section>
 	<!-- Page header section end -->
@@ -121,37 +122,75 @@ Onyx, Quartzite, Shiv Marble and Granitech">
     <!-- Team section start -->
 	<section class="team-section">
 		<div class="container-fluid">
-			<div class="section-title col-md-12 mob-no-padding">
-				<h1>STONE COLLECTION</h1>
-                <p>Having an assemblage of more than 200+ selected options for flooring, cladding and outdoor space, Shiv Marble 
-and Granite is the first choice of homeowners, builders and architects. The company relentlessly brings forth impeccable quality stones, which are flawless and can turn any concrete structure into an exuberant, lavish home. In the next two years, we plan to take our product portfolio to 1500+ options. Our products are available in thickness from <strong>3.6 mm to 100mm</strong>.</p>
-                <p>The company is known all around for its high-end products, accessible at a competitive price range. At Shiv Marble and Granite, the flooring & cladding material is available in the range of INR 40 to INR 5000 / Sq.Ft. Shiv Marble and Granite is a harbour of exclusive, commercial stones and tiles that once installed, will embellish your home, wall, floor in an aesthetically beautiful way.</p>
+			<div class="col-md-12 text-center">
+                <h2>We believe in Quality, Credibility,<br />
+Consistency & most Importantly – <span>Customer Satisfaction</span></h2>
 			</div>
-			<div class="row">
-				{% for st in stonesType %}
-				<div class="col-lg-4 col-vs-6 col-md-4 col-ds-6 col-rs-4 no-padding">
-					<div class="team-member">
-						<form action="{% url 'main:stone' %}" method="get">
-							<input type="hidden" name="StoneType" value="{{ st.name }}">
-							<!-- <a type="submit"> -->
-								<img src=" {{ st.image.url }} " alt="">
-								<div class="member-info">
-									<button type="submit" class="btn">{{ st.name }}</button>
-									<!-- <h2></h2> -->
-								</div>
-							<!-- </a>		 -->
-						</form>			
-					</div>
-			    </div>
-				{% endfor %}
-				
 			
+            
+            <div class="demo-gallery margin-top">
+            <ul id="lightgallery" class="list-unstyled row">
+                
+                {% for st in stones %}
+                <li class="col-md-3 no-padding" data-src=" {{ st.image.url }} " data-sub-html="<h4>{{ st.name }}</h4>">
+                    <a href="#">
+                        <img class="img-responsive" src=" {{ st.image.url }} ">
+                        <span>{{ st.name }} </span>
+                        <div class="demo-gallery-poster">
+                         <img src=" {{ st.image2.url }} ">
+                    </div>
+                    </a>
+                </li>
+                {% endfor %}
+                <!-- <li class="col-md-3 no-padding" data-src=" {% static 'images/imported-marble/big/armani-beige.jpg' %} " data-sub-html="<h4>Armani Beige</h4>">
+                    <a href="#">
+                        <img class="img-responsive" src=" {% static 'images/imported-marble/armani-beige.jpg' %} ">
+                        <span>Armani Beige</span>
+                        <div class="demo-gallery-poster">
+                         <img src=" {% static 'images/zoom.png' %} ">
+                    </div>
+                    </a>
+                </li>
                 
                 
+                <li class="col-md-3 no-padding" data-src=" {% static 'images/imported-marble/big/armani-grey.jpg' %} " data-sub-html="<h4>Armani Grey</h4>">
+                    <a href="#">
+                        <img class="img-responsive" src=" {% static 'images/imported-marble/armani-grey.jpg' %} ">
+                        <span>Armani Grey</span>
+                        <div class="demo-gallery-poster">
+                         <img src=" {% static 'images/zoom.png' %} ">
+                    </div>
+                    </a>
+                </li>
                 
                 
+                <li class="col-md-3 no-padding" data-src=" {% static 'images/imported-marble/big/australian-white.jpg' %} " data-sub-html="<h4>Australian White</h4>">
+                    <a href="#">
+                        <img class="img-responsive" src=" {% static 'images/imported-marble/australian-white.jpg' %} ">
+                        <span>Australian White</span>
+                        <div class="demo-gallery-poster">
+                         <img src=" {% static 'images/zoom.png' %} ">
+                    </div>
+                    </a>
+                </li>
                 
-			</div>
+                
+                <li class="col-md-3 no-padding" data-src=" {% static 'images/imported-marble/big/beige-traventine.jpg' %} " data-sub-html="<h4>Beige Traventine</h4>">
+                    <a href="#">
+                        <img class="img-responsive" src=" {% static 'images/imported-marble/beige-traventine.jpg' %} ">
+                        <span>Beige Traventine</span>
+                        <div class="demo-gallery-poster">
+                         <img src=" {% static 'images/zoom.png' %} ">
+                    </div>
+                    </a>
+                </li> -->
+                
+
+            </ul>
+        </div>
+            
+            
+            
 		</div>
 	</section>
 	<!-- Team section end -->
@@ -220,11 +259,11 @@ and Granite</strong></h4>
 <div class="col-md-3 col-lg-3 col-ds-6 col-rs-6 text-left ftr-padding-left">
 <h3>USEFUL LINKS</h3>
 <div class="ftr-padding-top">
-	<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% url 'main:thecompany' %} ">About SMG</a></li>
-	<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% url 'main:stonecraft' %} ">Stone Crafting Process</a></li>
-	<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% url 'main:whysmg' %}">WHY SMG?</a></li>
-	<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% url 'main:blogs' %} ">Blogs</a></li>
-	<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% url 'main:contact' %} ">Contact Us</a></li>
+<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'about-Shiv-Marble-and-Granite.html' %} ">About SMG</a></li>
+<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'stone-crafting-process.html' %} ">Stone Crafting Process</a></li>
+<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'why-Shiv-Marble-and-Granite.html' %} ">WHY SMG?</a></li>
+<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'blogs.html' %} ">Blogs</a></li>
+<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'contact.html' %} ">Contact Us</a></li>
 <a class="facebook" href="https://www.facebook.com/shivmarbleAndGranit/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 <a class="instagram" href="https://www.instagram.com/shiv_marble_granite/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 <a class="whatsapp" href="https://wa.me/9654435062" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
@@ -244,6 +283,7 @@ Website Designed &amp; Developed By: <a href=" {% static 'https://https://www.gr
 </div>
 </div>
 </div>
+
 
 
 
@@ -304,5 +344,5 @@ $('header').removeClass("sticky");
 </script>
 </body>
 <!-- InstanceEnd -->
-<!-- Mirrored from www.Shiv Marble and Granite.in/products.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Dec 2020 11:20:42 GMT -->
+<!-- Mirrored from www.Shiv Marble and Granite.in/imported-marble.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Dec 2020 11:21:18 GMT -->
 </html>

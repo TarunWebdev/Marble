@@ -38,8 +38,8 @@ def stonecollection(request):
 
 def stone(request):
     s_name = str(request.GET["StoneType"])
-    stones = Stone.objects.select_related('StoneType').filter(category__name=s_name)
-    stoneType = StoneType.objects.filter(chapter_name=s_name)
+    stones = Stone.objects.select_related('category').filter(category__name=s_name)
+    stoneType = StoneType.objects.filter(name=s_name)
     return render(request, "singleStone.html", {'stones': stones, 'stoneType': stoneType})
     # sends stones of a particular category
 

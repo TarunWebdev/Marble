@@ -424,9 +424,9 @@ Sq. ft. Sold</p>
 
 {% for cat , fil in mylist %}
 	{% if fil == 'all' %}
-	<li class="btn-filter" data-filter="*"> {{ cat.name|wordwrap:3 }} </li>
+	<li class="btn-filter" data-filter="*"> {{ cat.name }} </li>
 	{% else %}
-	<li class="btn-filter" data-filter=".{{ fil }}"> {{ cat.name|wordwrap:3 }} </li>
+	<li class="btn-filter" data-filter=".{{ fil }}"> {{ cat.name }} </li>
 	{% endif %}
 {% endfor %}
 </ul>
