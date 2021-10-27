@@ -88,16 +88,14 @@ and Granite is an eminent Indian stone enterprise and a leading global brand. Ha
 	<li><a href="{% url 'main:stonecollection' %}">STONE COLLECTION </a>
 	<ul>
 		<!-- From backend -->
-		<li><a href="imported-marble.html">Imported Marble</a></li>
-		<li><a href="indian-marble.html">Indian Marble</a></li>
-		<li><a href="imported-granite.html">Imported Granite</a></li>
-		<li><a href="indian-granite.html">Indian Granite</a></li>
-		<li><a href="kalinga-composite.html">Kalinga Composite</a></li>
-		<li><a href="kalinga-quartz.html">Kalinga Quartz</a></li>
-		<li><a href="onyx.html">Onyx</a></li>
-		<li><a href="quartzite.html">Quartzite</a></li>
-		<li><a href="art-craft.html">Art &amp; Craft</a></li>
-		<li><a href="{% url 'main:thecompany' %}">SMG</a></li>
+{% for st in stonesType %}
+				
+						<form action="{% url 'main:stone' %}" method="get">
+							<input type="hidden" name="StoneType" value="{{ st.name }}">
+							<button type="submit" style="border: none; margin-bottom: 1px;"><li><a>{{ st.name }}</a></li></button>			
+						</form>			
+					
+		{% endfor %}
 	</ul>
 	</li>
 	<li><a href="{% url 'main:stonecraft' %}">Stone Crafting Process</a></li>
