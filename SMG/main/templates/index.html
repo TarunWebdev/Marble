@@ -525,7 +525,20 @@ Application</h2>
 <!-- BACKEND -->
 <div class="ftr-padding-top">
 <ul>
-	<li><a href="imported-marble.html">Imported Marble</a></li>
+	
+		{% for st in stones %}
+		<li>	
+		<form action="{% url 'main:stone' %}" method="get">
+			<input type="hidden" name="StoneType" value="{{ st.name }}">
+			<button type="submit" style="border: none; margin-bottom: 1px;background: transparent;">
+				<li style="border-bottom: none;"><a>{{ st.name }}</a></li>
+			</button>			
+		</form>			
+		</li>
+		{% endfor %}
+		
+	
+	<!-- <li><a href="imported-marble.html">Imported Marble</a></li>
 	<li><a href="indian-marble.html">Indian Marble</a></li>
 	<li><a href="imported-granite.html">Imported Granite</a></li>
 	<li><a href="indian-granite.html">Indian Granite</a></li>
@@ -533,7 +546,7 @@ Application</h2>
 	<li><a href="kalinga-quartz.html">Kalinga Quartz</a></li>
 	<li><a href="onyx.html">Onyx</a></li>
 	<li><a href="art-craft.html">Art &amp; Craft</a></li>
-	<li><a href="{% url 'main:thecompany' %}">SMG</a></li>
+	<li><a href="{% url 'main:thecompany' %}">SMG</a></li> -->
 </ul>
 </div>
 </div>
