@@ -271,15 +271,16 @@ and Granite</strong></h4>
 <div class="col-md-3 col-lg-3 col-ds-6 col-rs-6 text-left ftr-border-right ftr-padding-left">
 <h3>STONE COLLECTIOIN</h3>
 <div class="ftr-padding-top">
-<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'imported-marble.html' %} ">Imported Marble</a></li>
-<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'indian-marble.html' %} ">Indian Marble</a></li>
-<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'imported-granite.html' %} ">Imported Granite</a></li>
-<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'indian-granite.html' %} ">Indian Granite</a></li>
-<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'kalinga-composite.html' %} ">Kalinga Composite</a></li>
-<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'kalinga-quartz.html' %} ">Kalinga Quartz</a></li>
-<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'onyx.html' %} ">Onyx</a></li>
-<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% static 'art-craft.html' %} ">Art & Craft</a></li>
-<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href=" {% url 'main:thecompany' %} ">SMG</a></li>
+{% for st in stones %}
+		<li>	
+		<form action="{% url 'main:stone' %}" method="get">
+			<input type="hidden" name="StoneType" value="{{ st.name }}">
+			<button type="submit" style="border: none; margin-bottom: 1px;background: transparent;">
+				<li style="border-bottom: none;"><a>{{ st.name }}</a></li>
+			</button>			
+		</form>			
+		</li>
+		{% endfor %}
 </div>
 </div>
 

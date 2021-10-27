@@ -40,10 +40,11 @@ def stonecollection(request):
     # sends all stone type
 
 def stone(request):
+    stonesALL = StoneType.objects.all()
     s_name = str(request.GET["StoneType"])
     stones = Stone.objects.select_related('category').filter(category__name=s_name)
     stoneType = StoneType.objects.filter(name=s_name)
-    return render(request, "singleStone.html", {'stones': stones, 'stoneType': stoneType})
+    return render(request, "singleStone.html", {'stones': stones, 'stoneType': stoneType , 'stoneALL' : stonesALL})
     # sends stones of a particular category
 
 # NEW FRONTEND
