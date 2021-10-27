@@ -22,13 +22,16 @@ def index(request):
 
 #ABOUT SMG
 def thecompany(request):
-    return render(request,'thecompany.html')
+    stones = StoneType.objects.all()
+    return render(request,'thecompany.html' , {'stones': stones})
 
 def management(request):
-    return render(request,'management-Shiv-Marble-and-Granite.html')
+    stones = StoneType.objects.all()
+    return render(request,'management-Shiv-Marble-and-Granite.html' , {'stones': stones})
 
 def capacity(request):
-    return render(request,'production-capacity.html')
+    stones = StoneType.objects.all()
+    return render(request,'production-capacity.html' , {'stones': stones})
 
 
 def stonecollection(request):
@@ -45,8 +48,9 @@ def stone(request):
 
 # NEW FRONTEND
 def blogs(request):
+    stones = StoneType.objects.all()
     blogs = Blog.objects.all()
-    return render(request , 'blogs.html' , {'blogs': blogs})
+    return render(request , 'blogs.html' , {'blogs': blogs ,'stones': stones})
     # sends all blogs for 'coming soon page'
 
 
@@ -59,11 +63,14 @@ def pageBlog(request):
 
 #STATIC
 def contact(request):
-    return render(request , 'contact.html')
+    stones = StoneType.objects.all()
+    return render(request , 'contact.html' , {'stones': stones})
 
 def stonecraft(request):
-    return render(request , 'stone-crafting-process.html')
+    stones = StoneType.objects.all()
+    return render(request , 'stone-crafting-process.html' , {'stones': stones})
 
 def whysmg(request):
-    return render(request , 'why-Shiv-Marble-and-Granite.html')
+    stones = StoneType.objects.all()
+    return render(request , 'why-Shiv-Marble-and-Granite.html' , {'stones': stones})
 
