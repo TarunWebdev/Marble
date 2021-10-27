@@ -84,7 +84,7 @@ Onyx, Quartzite, Shiv Marble and Granitech">
 	<li><a href="{% url 'main:stonecollection' %}">STONE COLLECTION </a>
 	<ul>
 		<!-- From backend -->
-{% for st in stonesType %}
+{% for st in stones %}
 				
 						<form action="{% url 'main:stone' %}" method="get">
 							<input type="hidden" name="StoneType" value="{{ st.name }}">
@@ -115,7 +115,7 @@ Onyx, Quartzite, Shiv Marble and Granitech">
                 <h2>HAVE SOME QUESTION?</h2>
 					<p>Our team is happy to answer your sales questions. Fill out the form and we’ll be in touch as soon as possible.</p>
 
-                <form action="https://www.Shiv Marble and Granite.in/sendmail.php" class="contact-form" method="post" enctype="multipart/form-data" name='theForm' id="theForm"  onsubmit="javascript:return Validation(this);">
+                <form action="https://www.ShivMarbleandGranite.com/sendmail.php" class="contact-form" method="post" enctype="multipart/form-data" name='theForm' id="theForm"  onsubmit="javascript:return Validation(this);">
                 
 				<input type="text" name="fullname" id="fullname" placeholder="Enter your name" onPaste="return false" onKeyPress="return alpha(event);">
 				<input type="text" name="email" id="email" placeholder="Enter your email address" onPaste="return false" onKeyPress="return checkEmail(event);">
@@ -358,8 +358,8 @@ and Granite</strong></h4>
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-12 text-center">
-<div class="weblink">Copyright © 2020 Shiv Marble and Granite.<br />
-Website Designed &amp; Developed By: <a href=" {% static 'https://https://www.greetservewebsolutions.online//' %} " target="_blank">Greet Serve Web Solutions</a></div>
+<div class="weblink">Copyright © 2021 Shiv Marble and Granite.<br />
+Website Designed &amp; Developed By: <a href=" {% static 'https://tarunsh.com/' %} " target="_blank">Devs Only</a></div>
 </div>
 </div>
 </div>

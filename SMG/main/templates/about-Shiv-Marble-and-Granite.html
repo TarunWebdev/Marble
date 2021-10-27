@@ -89,7 +89,7 @@ Onyx, Quartzite, Shiv Marble and Granitech">
 
 
 		<!-- From backend -->
-{% for st in stonesType %}
+{% for st in stones %}
 				
 						<form action="{% url 'main:stone' %}" method="get">
 							<input type="hidden" name="StoneType" value="{{ st.name }}">

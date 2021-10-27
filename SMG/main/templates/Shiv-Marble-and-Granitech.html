@@ -85,7 +85,7 @@ Onyx, Quartzite, Shiv Marble and Granitech">
 	<li><a href="{% url 'main:stonecollection' %}">STONE COLLECTION </a>
 	<ul>
 		<!-- From backend -->
-{% for st in stonesType %}
+{% for st in stones %}
 				
 						<form action="{% url 'main:stone' %}" method="get">
 							<input type="hidden" name="StoneType" value="{{ st.name }}">
@@ -278,8 +278,8 @@ and Granite</strong></h4>
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-12 text-center">
-<div class="weblink">Copyright © 2020 Shiv Marble and Granite.<br />
-Website Designed &amp; Developed By: <a href=" {% static 'https://https://www.greetservewebsolutions.online//' %} " target="_blank">Greet Serve Web Solutions</a></div>
+<div class="weblink">Copyright © 2021 Shiv Marble and Granite.<br />
+Website Designed &amp; Developed By: <a href=" {% static 'https://tarunsh.com/' %} " target="_blank">Devs Only</a></div>
 </div>
 </div>
 </div>

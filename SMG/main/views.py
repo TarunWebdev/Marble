@@ -55,9 +55,10 @@ def blogs(request):
 
 
 def pageBlog(request):
+    stones = StoneType.objects.all()
     bObjget = str(request.GET["title"])
     blogs = Blog.objects.filter(title=bObjget)
-    return render(request, "blog.html", {'bObj': blogs})
+    return render(request, "blog.html", {'bObj': blogs , 'stones': stones})
 # New blog Page from Github which will be for single Blog view
 
 
