@@ -58,6 +58,7 @@ Onyx, Quartzite, Shiv Marble and Granitech">
 <link rel="stylesheet" type="text/css" href=" {% static 'css/to-top.css' %} " media="screen"/>
 <link rel="stylesheet" href=" {% static 'css/menu.css' %} ">
 
+
 </head>
 <body>
     
@@ -84,8 +85,18 @@ Onyx, Quartzite, Shiv Marble and Granitech">
 	</li>
 	<li><a href="{% url 'main:stonecollection' %}">STONE COLLECTION </a>
 	<ul>
+
+
+		{% for st in stonesType %}
+				
+						<form action="{% url 'main:stone' %}" method="get">
+							<input type="hidden" name="StoneType" value="{{ st.name }}">
+							<button type="submit" style="border: none; margin-bottom: 1px;"><li><a>{{ st.name }}</a></li></button>			
+						</form>			
+					
+		{% endfor %}
 		<!-- From backend -->
-		<li><a href="imported-marble.html">Imported Marble</a></li>
+		<!-- <li><a href="imported-marble.html">Imported Marble</a></li>
 		<li><a href="indian-marble.html">Indian Marble</a></li>
 		<li><a href="imported-granite.html">Imported Granite</a></li>
 		<li><a href="indian-granite.html">Indian Granite</a></li>
@@ -94,7 +105,7 @@ Onyx, Quartzite, Shiv Marble and Granitech">
 		<li><a href="onyx.html">Onyx</a></li>
 		<li><a href="quartzite.html">Quartzite</a></li>
 		<li><a href="art-craft.html">Art &amp; Craft</a></li>
-		<li><a href="{% url 'main:thecompany' %}">SMG</a></li>
+		<li><a href="{% url 'main:thecompany' %}">SMG</a></li> -->
 	</ul>
 	</li>
 	<li><a href="{% url 'main:stonecraft' %}">Stone Crafting Process</a></li>
